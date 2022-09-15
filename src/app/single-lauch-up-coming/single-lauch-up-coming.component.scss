@@ -1,0 +1,25 @@
+.container{
+    margin: auto;
+    height: 50%;
+    max-width: 50%;
+}
+
+.btn{
+    margin-top: 5px;
+}
+#rocketContaint{
+    background-color: aliceblue;
+    display: block;
+
+}
+div#rocketContaint > #rocketName{
+    font: bold;
+    color: rgb(0, 213, 255);
+}
+div#rocketContaint > #rocketName{
+    font: bold;
+    color: rgb(0, 213, 255);
+}
+div#rocketContaint > div#launchCount{
+    background-color: rgb(220, 245, 244);
+}

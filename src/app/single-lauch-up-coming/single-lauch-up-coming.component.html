@@ -1,0 +1,33 @@
+
+<div class="container">
+    <mat-card class="card-launch">
+        <mat-card-title-group>
+          <mat-card-title>{{launch.name}}</mat-card-title>
+          <mat-card-subtitle>{{launch.status.name}}</mat-card-subtitle>
+          <img mat-card-sm-image src="{{launch.image}}" >
+        </mat-card-title-group>
+        <mat-card-content>
+            <p>{{launch.status.abbrev}}</p>
+            <p>{{launch.status.description}}</p>
+          <mat-divider></mat-divider>
+            <div id="rocketContaint">
+                <h4><strong>Rocket</strong></h4>
+                <mat-divider></mat-divider>
+                <p id="rocketName"> <strong>Name:</strong> {{launch.rocket.configuration.name}}</p>
+                <div id="launchCount">
+                    <p><strong>Consecutive successful launches :</strong>  {{launch.rocket.configuration.consecutive_successful_launches}}</p>
+                    <p> <strong> Successful launches: </strong>  {{launch.rocket.configuration.successful_launches}}</p>
+                    <p><strong> Failed launches: </strong>  {{launch.rocket.configuration.failed_launches}}</p>
+                    <p><strong> Total launch count:</strong>  {{launch.rocket.configuration.total_launch_count}}</p>
+                    </div>
+                <mat-divider></mat-divider>
+                <p><strong>Location:</strong> {{launch.pad.location.name}}</p>
+                <mat-divider></mat-divider>
+                <p><strong>Description:</strong> {{launch.rocket.configuration.description}}</p>
+            </div>
+
+          <button mat-raised-button class="btn"  color="primary" type="button" (click)="prev()" class="button" >List</button>
+        </mat-card-content>
+    </mat-card>
+
+</div>

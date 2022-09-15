@@ -1,0 +1,23 @@
+
+<div class="container">
+  <div *ngIf="results.length <=0">
+    <mat-spinner></mat-spinner>
+  </div>
+  <div>
+    <mat-card class="card-launch" *ngFor="let launch of results">
+      <mat-card-title-group>
+        <mat-card-title>{{launch.name}}</mat-card-title>
+        <mat-card-subtitle>{{launch.status.name}}</mat-card-subtitle>
+        <img mat-card-sm-image src="{{launch.image}}" >
+      </mat-card-title-group>
+      <mat-card-content>
+          <p>{{launch.status.abbrev}}</p>
+          <p>{{launch.status.description}}</p>
+        <mat-divider></mat-divider>
+        <button mat-raised-button class="btn" color="primary" type="button" (click)="view(launch.id)" class="button" >view details</button>
+      </mat-card-content>
+  </mat-card>
+  </div>
+    
+
+</div>
